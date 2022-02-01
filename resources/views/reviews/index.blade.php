@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+@extends('layouts.app')　
+
+@section('content')
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -11,8 +14,9 @@
     </head>
     
     <body>
+        {{Auth::user()->name}}
         <h1>口コミ一覧</h1>
-        <p class = 'back'>[<a href = 'makers'>メーカ一覧画面に戻る</a>]</p>
+        <p class = 'back'>[<a href = '/'>メーカ一覧画面に戻る</a>]</p>
         <p class ='create'>[<a href = '/reviews/create'>口コミを作成する</a>]</p>
         <div class = 'reviews'>
             @foreach ($reviews as $review)
@@ -41,3 +45,5 @@
             {{ $reviews->links() }}
         </div>
     </body>
+</html>
+@endsection
