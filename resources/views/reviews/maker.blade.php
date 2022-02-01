@@ -9,7 +9,7 @@
     </head>
     <body>
         
-        <h1>[<a href='/reviews'>口コミ一覧画面へ</a>]</h1>
+        <h1>[<a href='/login'>口コミ一覧画面へ</a>]</h1>
         
         <h2>①HEAD</h2>
         <img src ="{{secure_asset('img/head.png')}}">

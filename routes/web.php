@@ -12,12 +12,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/makers', 'ReviewController@maker');
-Route::get('/reviews', 'ReviewController@index');
-Route::get('/reviews/create','ReviewController@create');
-Route::get('/reviews/{review}/edit', 'ReviewController@edit');
-Route::put('/reviews/{review}', 'ReviewController@update');
-Route::delete('/reviews/{review}', 'ReviewController@destroy');
-Route::get('/reviews/{review}', 'ReviewController@show');
-Route::post('/reviews', 'ReviewController@store');
+Route::get('/', 'ReviewController@maker');
+Route::group(['middleware' => ['auth']], function(){
+    Route::get('/reviews', 'ReviewController@index');
+    Route::get('/reviews/create','ReviewController@create');
+    Route::get('/reviews/{review}/edit', 'ReviewController@edit');
+    Route::put('/reviews/{review}', 'ReviewController@update');
+    Route::delete('/reviews/{review}', 'ReviewController@destroy');
+    Route::get('/reviews/{review}', 'ReviewController@show');
+    Route::post('/reviews', 'ReviewController@store');
+});
 Route::get('/makers/{maker}', 'MakerController@index');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
