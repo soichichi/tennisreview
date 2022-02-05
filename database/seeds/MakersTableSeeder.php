@@ -13,19 +13,15 @@ class MakersTableSeeder extends Seeder
     {
         DB::table('makers')->insert([
             [
-            'id' => '1',
             'name' => 'HEAD',
             ],
             [
-            'id' => '2',
             'name' => 'BABOLAT',
             ],
             [
-            'id' => '3',
             'name' => 'WILSON',
             ],
             [
-            'id' => '4',
             'name' => 'YONEX',  
             ]
         ]);  
