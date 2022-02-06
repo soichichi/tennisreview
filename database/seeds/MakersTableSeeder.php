@@ -15,18 +15,26 @@ class MakersTableSeeder extends Seeder
             [
             'id' => '1',
             'name' => 'HEAD',
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime(),
             ],
             [
             'id' => '2',
             'name' => 'BABOLAT',
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime(),
             ],
             [
             'id' => '3',
             'name' => 'WILSON',
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime(),
             ],
             [
             'id' => '4',
-            'name' => 'YONEX',  
+            'name' => 'YONEX',
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime(),
             ]
         ]);  
     }
